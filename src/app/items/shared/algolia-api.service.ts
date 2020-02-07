@@ -14,7 +14,6 @@ export class AlgoliaApiService {
   constructor(private http: HttpClient) { }
 
   getTopItems(page: number): Observable<FrontPage> {
-    console.log(`${this.baseUrl}/search?tags=front_page&page=${page}`);
     return this.http.get<FrontPage>(`${this.baseUrl}/search?tags=front_page&page=${page}`)
       .pipe(retry(3));
   }
