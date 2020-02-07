@@ -1,0 +1,23 @@
+<ng-template [ngIf]="loading">
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container">
+        <ngx-spinner bdOpacity="0" bdColor="#fff" size="medium" color="#000" type="ball-spin" [fullScreen]="false">
+        </ngx-spinner>
+      </div>
+    </div>
+  </section>
+</ng-template>
+
+<ng-template [ngIf]="!loading">
+  <app-item-node [item]="item"></app-item-node>
+
+  <section *ngIf="item.text">
+    <div class="content has-text-grey" [innerHTML]="item.text"></div>
+  </section>
+
+  <div class="content">
+    <hr />
+    <ul app-comment-tree [children]="item.children"></ul>
+  </div>
+</ng-template>

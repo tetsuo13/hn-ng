@@ -1,0 +1,21 @@
+<ng-template [ngIf]="loading">
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container">
+        <ngx-spinner bdOpacity="0" bdColor="#fff" size="medium" color="#000" type="ball-spin" [fullScreen]="false">
+        </ngx-spinner>
+      </div>
+    </div>
+  </section>
+</ng-template>
+
+<ng-template [ngIf]="!loading">
+  <ol [start]="(itemsPerPage * page) + 1">
+    <li *ngFor="let item of items" app-item-node [item]="item"></li>
+  </ol>
+
+  <div>
+    <a *ngIf="page < totalPages - 1" [routerLink]="['/news', page + 1]">More</a>
+    <a *ngIf="page >= 1" [routerLink]="['/']">Less</a>
+  </div>
+</ng-template>

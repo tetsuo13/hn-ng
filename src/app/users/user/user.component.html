@@ -1,0 +1,23 @@
+<ng-template [ngIf]="user">
+  <div class="field is-horizontal">
+    <div class="field-label">User:</div>
+    <div class="field-body">{{ user.username }}</div>
+  </div>
+
+  <div class="field is-horizontal">
+    <div class="field-label">Created:</div>
+    <div class="field-body">
+      <time [dateTime]="user.created_at_i * 1000 | date:'yyyy-MM-dd HH:mm:ss'">{{ user.created_at_i | timeago }}</time>
+    </div>
+  </div>
+
+  <div class="field is-horizontal">
+    <div class="field-label">Karma:</div>
+    <div class="field-body">{{ user.karma }}</div>
+  </div>
+
+  <div class="field is-horizontal">
+    <div class="field-label">About:</div>
+    <div class="field-body" [innerHTML]="user.about"></div>
+  </div>
+</ng-template>

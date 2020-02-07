@@ -1,0 +1,9 @@
+article {
+  padding-bottom: 8px;
+}
+  article > div {
+    display: flex;
+  }
+    article > div > span {
+      padding-left: 7px;
+    }

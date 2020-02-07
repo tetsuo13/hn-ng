@@ -1,0 +1,19 @@
+<li *ngFor="let level of children">
+  <!-- Sometimes there's no comment text, or author -->
+  <article class="message" *ngIf="level.text">
+    <div class="message-body">
+      <nav class="breadcrumb has-dot-separator is-small" aria-label="breadcrumbs">
+        <ul>
+          <li><a [routerLink]="['/user', level.author]">{{ level.author }}</a></li>
+          <li>
+            <time
+              [dateTime]="level.created_at_i * 1000 | date:'yyyy-MM-dd HH:mm:ss'">{{ level.created_at_i | timeago }}</time>
+          </li>
+        </ul>
+      </nav>
+      <p [innerHTML]="level.text"></p>
+    </div>
+  </article>
+
+  <ul app-comment-tree *ngIf="level.children" [children]="level.children"></ul>
+</li>
