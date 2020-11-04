@@ -25,9 +25,9 @@ describe('HeaderComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it(`should have as title 'Angular 9 HN'`, () => {
+  it(`should have as title 'Angular 10 HN'`, () => {
     const fixture = TestBed.createComponent(HeaderComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('Angular 9 HN');
+    expect(app.title).toEqual('Angular 10 HN');
   });
 });
