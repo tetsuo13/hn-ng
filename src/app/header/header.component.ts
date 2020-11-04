@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  title: string = 'Angular 9 HN';
+  title: string = 'Angular 10 HN';
 
   constructor() { }
 
