@@ -1,5 +1,4 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { NgxSpinnerModule } from 'ngx-spinner';
 import { RouterTestingModule } from '@angular/router/testing';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
@@ -27,7 +26,6 @@ describe('ItemComponent', () => {
         NumberofchildrenPipe
       ],
       imports: [
-        NgxSpinnerModule,
         RouterTestingModule,
         HttpClientTestingModule,
         NoopAnimationsModule

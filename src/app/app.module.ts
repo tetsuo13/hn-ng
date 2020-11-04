@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
-import { NgxSpinnerModule } from 'ngx-spinner';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -21,23 +20,22 @@ import { FooterComponent } from './footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    ItemListComponent,
-    ItemDetailComponent,
-    TimeagoPipe,
-    HostnamePipe,
-    ItemNodeComponent,
     CommentTreeComponent,
-    UserComponent,
+    FooterComponent,
+    HeaderComponent,
+    HostnamePipe,
+    ItemListComponent,
+    ItemNodeComponent,
+    ItemDetailComponent,
     NumberofchildrenPipe,
-    FooterComponent
+    TimeagoPipe,
+    UserComponent
   ],
   imports: [
-    BrowserModule,
     AppRoutingModule,
-    HttpClientModule,
     BrowserAnimationsModule,
-    NgxSpinnerModule
+    BrowserModule,
+    HttpClientModule,
   ],
   providers: [
     AlgoliaApiService

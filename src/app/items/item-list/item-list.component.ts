@@ -1,6 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
-import { NgxSpinnerService } from 'ngx-spinner';
 import { Subscription } from 'rxjs';
 
 import { Item } from '../shared/item.model';
@@ -22,12 +21,10 @@ export class ItemListComponent implements OnInit, OnDestroy {
   private subscription: Subscription;
 
   constructor(private readonly itemService: AlgoliaApiService,
-    private readonly spinner: NgxSpinnerService,
     private readonly route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.loading = true;
-    this.spinner.show();
 
     this.route.params.subscribe((params: Params) => {
       const page = params['page'];
@@ -40,7 +37,6 @@ export class ItemListComponent implements OnInit, OnDestroy {
         this.page = frontPage.page;
         this.totalPages = frontPage.nbPages;
         this.itemsPerPage = frontPage.hitsPerPage;
-        this.spinner.hide();
         this.loading = false;
       });
   }

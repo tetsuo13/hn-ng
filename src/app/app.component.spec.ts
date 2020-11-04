@@ -1,5 +1,4 @@
 import { TestBed, async } from '@angular/core/testing';
-import { NgxSpinnerModule } from 'ngx-spinner';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -31,8 +30,7 @@ describe('AppComponent', () => {
         NumberofchildrenPipe
       ],
       imports: [
-        AppRoutingModule,
-        NgxSpinnerModule
+        AppRoutingModule
       ]
     }).compileComponents();
   }));

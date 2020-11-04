@@ -22,7 +22,6 @@
     "@angular/router": "^9.1.12",
     "bulma": "^0.8.2",
     "epoch-timeago": "^1.1.9",
-    "ngx-spinner": "^8.1.0",
     "rxjs": "^6.6.3",
     "tslib": "^1.14.1",
     "zone.js": "^0.10.3"
