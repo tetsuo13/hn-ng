@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 
 import { ItemNodeComponent } from './item-node.component';
@@ -10,7 +10,7 @@ describe('ItemNodeComponent', () => {
   let component: ItemNodeComponent;
   let fixture: ComponentFixture<ItemNodeComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ItemNodeComponent, HostnamePipe, TimeagoPipe, NumberofchildrenPipe],
       imports: [RouterTestingModule]
